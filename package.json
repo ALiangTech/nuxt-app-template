@@ -1,16 +1,67 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18",
-    "nuxt": "^3.6.2"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.22.8",
+        "@babel/eslint-parser": "^7.22.7",
+        "@nuxt/devtools": "latest",
+        "@nuxtjs/eslint-module": "^4.1.0",
+        "@nuxtjs/stylelint-module": "^5.1.0",
+        "@types/node": "^18",
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "@vue/eslint-config-typescript": "^11.0.3",
+        "eslint": "^8.44.0",
+        "eslint-config-alloy": "^5.0.0",
+        "eslint-plugin-vue": "^9.15.1",
+        "nuxt": "^3.6.2",
+        "prettier": "^3.0.0",
+        "stylelint": "^15.10.1",
+        "stylelint-config-standard": "^34.0.0",
+        "stylelint-config-standard-vue": "^1.0.0",
+        "vue-eslint-parser": "^9.3.1"
+    },
+    "prettier": {
+        "semi": true
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "browser": true
+        },
+        "parser": "vue-eslint-parser",
+        "parserOptions": {
+            "parser": {
+                "js": "@babel/eslint-parser",
+                "jsx": "@babel/eslint-parser",
+                "ts": "@typescript-eslint/parser",
+                "tsx": "@typescript-eslint/parser"
+            }
+        },
+        "extends": [
+            "alloy",
+            "alloy/vue",
+            "alloy/typescript"
+        ],
+        "rules": {
+            "@typescript-eslint/prefer-optional-chain": "off"
+        }
+    },
+    "stylelint": {
+        "root": true,
+        "extends": [
+            "stylelint-config-standard",
+            "stylelint-config-standard-vue"
+        ],
+        "rules": {
+            "declaration-property-value-no-unknown": true
+        }
+    }
 }
