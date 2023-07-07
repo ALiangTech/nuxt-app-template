@@ -2,5 +2,5 @@
 // eslint-disable-next-line no-undef
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/eslint-module", "@nuxtjs/stylelint-module"],
+  modules: ["@nuxtjs/eslint-module", "@nuxtjs/stylelint-module",'@unocss/nuxt'],
 });
